@@ -8,7 +8,7 @@ node_js:
 branches:
   only:
     - develop
-    - master
+    - main
 
 notifications:
   email: false
@@ -36,4 +36,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist/tp-angular
   on:
-    branch: master
+    branch: main
