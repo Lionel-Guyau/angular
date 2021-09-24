@@ -28,12 +28,12 @@ script:
 
 before_deploy:
   - npm run build -- --base-href /formation-angular-09-2021/
-  - cp dist/tp-angular/index.html dist/tp-angular/404.html
+  - cp dist/lionel-app/index.html dist/lionel-app/404.html
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/tp-angular
+  local_dir: dist/lionel-app
   on:
     branch: main
