@@ -27,7 +27,7 @@ script:
   - npm run test -- --watch=false --no-progress --browsers=ChromeHeadless
 
 before_deploy:
-  - npm run build -- --base-href /formation-angular-09-2021/
+  - npm run build -- --base-href /angular/
   - cp dist/lionel-app/index.html dist/lionel-app/404.html
 
 deploy:
