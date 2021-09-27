@@ -24,17 +24,15 @@ install:
   - npm ci
 
 script:
-  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadless
+  - npm run test
 
 before_deploy:
-  - npm run build -- --base-href /angular/
-  - cp dist/lionel-app/index.html dist/lionel-app/404.html
+  - npm run build
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  edge: true
   local_dir: dist/lionel-app
   on:
     branch: main
